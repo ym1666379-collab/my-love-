@@ -18,7 +18,13 @@ body {
   color: #6b2946;
   text-align: center;
 }
+<script>
+const password = prompt("🔐 اكتب الباسورد");
 
+if (password !== "love") {
+  document.body.innerHTML = "<h1>❌ الباسورد غلط</h1>";
+}
+</script>
 header {
   padding: 65px 20px 45px;
 }
