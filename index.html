@@ -12,13 +12,17 @@
 }
 
 body {
-<script>
-const password = prompt("🔐 اكتب الباسورد");
+<div id="passwordScreen">
+  <h2>🔐 اكتب الباسورد</h2>
 
-if (password !== "love") {
-  document.body.innerHTML = "<h1>❌ الباسورد غلط</h1>";
-}
-</script>
+  <input type="password" id="passwordInput" placeholder="Password">
+
+  <button onclick="checkPassword()">دخول ❤️</button>
+
+  <p id="wrongPassword"></p>
+</div>
+
+<div id="siteContent" style="display:none;">
 header {
   padding: 65px 20px 45px;
 }
@@ -204,6 +208,19 @@ function showSurprise() {
   document.getElementById("surprise").style.display = "block";
 }
 </script>
+</div>
 
+<script>
+function checkPassword() {
+  const password = document.getElementById("passwordInput").value;
+
+  if (password === "love") {
+    document.getElementById("passwordScreen").style.display = "none";
+    document.getElementById("siteContent").style.display = "block";
+  } else {
+    document.getElementById("wrongPassword").textContent = "❌ الباسورد غلط";
+  }
+}
+</script>
 </body>
 </html>
