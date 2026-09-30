@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday 🎂❤️</title>
+
+<style>
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #ffe0eb, #fff0f5);
+  color: #6b2946;
+  text-align: center;
+}
+
+#passwordScreen {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+#passwordScreen input {
+  padding: 14px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  font-size: 17px;
+  text-align: center;
+  margin: 10px;
+}
+
+button {
+  background: #e75480;
+  color: white;
+  border: none;
+  padding: 14px 25px;
+  border-radius: 25px;
+  font-size: 17px;
+}
+
+#wrongPassword {
+  color: red;
+}
+
+#siteContent {
+  display: none;
+}
+
+header {
+  padding: 60px 20px 40px;
+}
+
+h1, h2 {
+  color: #d63384;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  margin: 20px auto;
+  border-radius: 22px;
+  max-width: 850px;
+  box-shadow: 0 5px 20px #d98ca344;
+}
+
+.message {
+  font-size: 19px;
+  line-height: 2;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  padding: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- شاشة الباسورد -->
+
+<div id="passwordScreen">
+
+  <h1>🔐 عيد ميلاد سعيد 🎂</h1>
+
+  <p>اكتب الباسورد عشان تدخل ❤️</p>
+
+  <input type="password" id="passwordInput" placeholder="Password">
+
+  <button onclick="checkPassword()">دخول ❤️</button>
+
+  <p id="wrongPassword"></p>
+
+</div>
+
+
+<!-- محتوى الموقع -->
+
+<div id="siteContent">
+
+<header>
+
+<h1>Happy Birthday 🎂❤️</h1>
+
+<p>
+النهارده يوم مميز جدًا ❤️
+</p>
+
+</header>
+
+<section>
+
+<div class="card">
+
+<h2>💌 رسالة ليك</h2>
+
+<p class="message">
+
+كل سنة وإنت طيب ❤️
+<br>
+يارب السنة الجديدة تكون مليانة فرحة ونجاح ✨
+<br>
+وتحقق كل اللي نفسك فيه 🎂💗
+
+</p>
+
+</div>
+
+</section>
+
+
+<section>
+
+<h2>📸 أحلى ذكرياتنا</h2>
+
+<div class="card gallery">
+
+<img src="Photo1.JPG" alt="ذكرى 1">
+
+<img src="Photo2.JPG" alt="ذكرى 2">
+
+<img src="Photo3.JPG" alt="ذكرى 3">
+
+<img src="Photo4.JPG" alt="ذكرى 4">
+
+</div>
+
+</section>
+
+</div>
+
+
+<script>
+
+function checkPassword() {
+
+  const password =
+  document.getElementById("passwordInput").value;
+
+  if (password === "love") {
+
+    document.getElementById("passwordScreen").style.display = "none";
+
+    document.getElementById("siteContent").style.display = "block";
+
+  } else {
+
+    document.getElementById("wrongPassword").textContent =
+    "❌ الباسورد غلط";
+
+  }
+
+}
+
+</script>
+
+</body>
+
+</html>
